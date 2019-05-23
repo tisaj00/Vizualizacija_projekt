@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="oblikovanje.css"/>
+
+
+<script type="text/javascript" src="main.js"></script>
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<style>
+.tooltip {
+	background: #eee;
+	box-shadow: 0 0 5px #999999;
+	color: #333;
+	font-size: 12px;
+	left: 130px;
+	padding: 10px;
+	position: absolute;
+	text-align: center;
+	top: 95px;
+	width: 250px;
+	z-index: 10;
+	display: block;
+	opacity: 0;
+	
+}
+.legend {
+	font-size: 13px;
+}
+rect {
+	cursor: pointer;                                              
+	stroke-width: 3;
+}
+rect.disabled {                                                 
+	fill: transparent !important;                                 
+}
+.title1{
+  text-align: center;
+  color: #269CEB;
+  margin-top: 0px;
+  float: left;
+  clear: both;
+  margin-left: 300px;
+}
+
+.title2 {
+  text-align: center;
+  color: #FF9D00;
+}
+</style>
+<body>
+<div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Hrvatska<span class="logo_colour"> eurovision 2008-2019</span></a></h1>
+          
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          
+          <li class="selected"><a href="hrvatska.html">Hrvatska</a></li>
+          
+          <li><a href="participation.html">Sudjelovanje zemalja</a></li>
+        </ul>
+      </div>
+    </div>
+	<center style="font-family: Futura,Trebuchet MS,Arial,sans-serif;font-weight: bold;font-size: 20px;"><hr>
+	
+<div style="margin:75px;"  id="chart">
+<h1 class="title1">Hrvatska u polufinalima   </h1>
+<h1 class="title2">    Hrvatska u finalima</h1></div>
+<script> //http://bl.ocks.org/arpitnarechania/577bd1d188d66dd7dffb69340dc2d9c9 
+    var inputData = [
+	{label:"Tel Aviv",performer:"Roko - The Dream",year: "2019 - TEL AVIV",value:64, place:14},
+	{label:"Lisbon",performer:"Franka - Crazy",year: "2018 - LISBON",value:64, place:17},
+	{label:"Kyiv",performer:"Jacques Houdek - My Friend",year: "2017 - KYIV",value:141, place:8},
+	{label:"Stockholm",performer:"Nina Kraljić - Lighthouse",year: "2016 - STOCKHOLM",value:133, place:10},
+	{label:"Baku",performer:"Nina Badrić - Nebo",year: "2012 - BAKU",value:42, place:12},
+	{label:"Malmo",performer:"Klapa s mora - Mižerja",year: "2013 - MALMÖ",value:38, place:13},
+	{label:"Oslo",performer:"Feminnem - Lako je sve",year: "2010 - OSLO",value:33, place:13},
+	{label:"Düsseldorf",performer:"Daria - Celebrate",year: "2011 - DÜSSELDORF",value:41, place:15},
+	{label:"Moscow",performer:"Igor Cukrov feat. Andrea - Lijepa Tena",year: "2009 - MOSCOW",value:33, place:13},
+	{label:"Beograd",performer:"Kraljevi Ulice & 75 Cents - Romanca ",year: "2008 - BEOGRAD",value:112, place:4}];
+
+    var colorScheme = ["#97C629","#3835C6","#C635AC","#25C6A1","#D3B928","#D32828","#FF7F24","#FFF176","#64B5F6","#00E676"];
+    renderPieChart(inputData,"#chart",colorScheme);
+		
+	var inputData = [
+	{label:"Kyiv",performer:"Jacques Houdek - My Friend",year: "2017 - KYIV",value:128, place:13},
+	{label:"Stockholm",performer:"Nina Kraljić - Lighthouse",year: "2016 - STOCKHOLM",value:73, place:23},
+	{label:"Moscow",performer:"Igor Cukrov feat. Andrea - Lijepa Tena",year: "2009 - MOSCOW",value:45, place:18},
+	{label:"Beograd",performer:"Kraljevi Ulice & 75 Cents - Romanca ",year: "2008 - BEOGRAD",value:44, place:21}];
+	
+    var colorScheme = ["#ADFF2F","#1064ab","#8ecfe4","#fe98f9","#D3B928","#D32828","#4DB6AC","#FFF176","#64B5F6","#00E676"];
+    renderPieChart(inputData,"#chart",colorScheme);
+	
+</script><br>  
+<div id="images">
+<div>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/Q06z-EaBvjE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p> 2017-KYIV</p></a>
+  </div>
+   <div>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/yBrADG8lWFY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p> 2016-STOCKHOLM</p></a>
+  </div>
+  <div>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/z5_tqyCjFZ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p> 2012-BAKU</p></a>
+  </div>
+  <div>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/gXT5E8kUgfs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p> 2019-TEL AVIV</p></a>
+  </div>
+  
+ 
+</div>
+<div id="images">
+  <div>
+ <iframe width="300" height="200" src="https://www.youtube.com/embed/qdESBf3UFQI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p> 2013-MALMÖ</p></a>
+  </div>
+  <div>
+ <iframe width="300" height="200" src="https://www.youtube.com/embed/tkl4YU5oHB8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p> 2010-OSLO</p></a>
+  </div>
+  
+  <div>
+ <iframe width="300" height="200" src="https://www.youtube.com/embed/dtcsw6vLENg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p> 2011-DÜSSELDORF</p></a>
+  </div>
+  <div>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/19Yo86KCd0w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p> 2018 - LISBON</p></a>
+  </div> 
+</div>
+
+</body>
+</html>
