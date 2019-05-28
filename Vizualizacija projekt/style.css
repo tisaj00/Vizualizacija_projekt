@@ -17,9 +17,9 @@
 	font-size: 12px;
 }
 rect {
-	cursor: pointer;                                              /* NEW */
+	cursor: pointer;                                              
 	stroke-width: 2;
 }
-rect.disabled {                                                 /* NEW */
-	fill: transparent;                           /* NEW */
+rect.disabled {                                                 
+	fill: transparent;                          
 }

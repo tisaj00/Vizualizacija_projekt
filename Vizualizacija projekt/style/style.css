@@ -7,7 +7,7 @@ html
 
 body
 { font: normal .80em 'trebuchet ms', arial, sans-serif;
-  background: #F5F5EE;
+  background: #ede8e8;
   color: #555;}
 
 p
@@ -52,7 +52,7 @@ h5, h6
 a, a:hover
 { outline: none;
   text-decoration: underline;
-  color: #AEB002;}
+  color: #f45342;}
 
 a:hover
 { text-decoration: none;}

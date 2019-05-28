@@ -11,8 +11,6 @@ var Map = module.exports = function() {
     var mapDiv;
     var canvasCanvas;
     var layerBox;
-    var zoomBox;
-    var panBox;
     var mapProjection;
     var mapZoom;
     var mapCenter = [12,42];
@@ -99,16 +97,7 @@ var Map = module.exports = function() {
     layerBox = selectedDiv.insert("div", "svg").attr("id", "d3MapLayerBox");
     layerBox.append("div").attr("id", "layerBoxContent");
 
-    zoomBox = selectedDiv.insert("div", "svg").attr("id", "d3MapZoomBox").attr("class", "d3MapControlsBox");
-    panBox = selectedDiv.insert("div", "svg").attr("id", "d3MapPanBox").attr("class", "d3MapControlsBox");
-
-    zoomBox.selectAll("button.zoomcontrol").data(["in", "out"]).enter().append("button").attr("class", "zoomcontrol").attr("id", function(d) {return d})
-    .on("click", manualZoom).html(function(d) {return d=="in" ? "+" : "-"});
     
-    var panSymbols = {"up": "&#8593;","down": "&#8595;","left": "&#8592;","right": "&#8594;"}
-    panBox.selectAll("button.pancontrol").data(["up","down","left", "right"]).enter().append("button").attr("class", "pancontrol")
-    .attr("id", function(d) {return d})
-    .on("click", function(d) {return manualPan(d,.5)}).html(function(d) {return panSymbols[d]});
     
     map.mode("transform");
     

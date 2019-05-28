@@ -68,8 +68,8 @@ svg, canvas {
     position: relative;
 	color: silver;
     z-index: 10;
-    height: 120px;
-    width: 120px;
+    height: 140px;
+    width: 140px;
     top: 10px;
     left: 10px;
     overflow: auto;
